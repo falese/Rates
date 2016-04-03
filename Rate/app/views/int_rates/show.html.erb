@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Interestrate:</strong>
+  <%= @int_rate.InterestRate %>
+</p>
+
+<p>
+  <strong>Effectivedate:</strong>
+  <%= @int_rate.EffectiveDate %>
+</p>
+
+<p>
+  <strong>Creationdate:</strong>
+  <%= @int_rate.CreationDate %>
+</p>
+
+<%= link_to 'Edit', edit_int_rate_path(@int_rate) %> |
+<%= link_to 'Back', int_rates_path %>

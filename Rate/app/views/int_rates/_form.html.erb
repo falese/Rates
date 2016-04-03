@@ -1,0 +1,29 @@
+<%= form_for(@int_rate) do |f| %>
+  <% if @int_rate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@int_rate.errors.count, "error") %> prohibited this int_rate from being saved:</h2>
+
+      <ul>
+      <% @int_rate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :InterestRate %><br>
+    <%= f.text_field :InterestRate %>
+  </div>
+  <div class="field">
+    <%= f.label :EffectiveDate %><br>
+    <%= f.date_select :EffectiveDate %>
+  </div>
+  <div class="field">
+    <%= f.label :CreationDate %><br>
+    <%= f.date_select :CreationDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

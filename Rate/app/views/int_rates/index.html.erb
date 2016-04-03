@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Int Rates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Interestrate</th>
+      <th>Effectivedate</th>
+      <th>Creationdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @int_rates.each do |int_rate| %>
+      <tr>
+        <td><%= int_rate.InterestRate %></td>
+        <td><%= int_rate.EffectiveDate %></td>
+        <td><%= int_rate.CreationDate %></td>
+        <td><%= link_to 'Show', int_rate %></td>
+        <td><%= link_to 'Edit', edit_int_rate_path(int_rate) %></td>
+        <td><%= link_to 'Destroy', int_rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Int rate', new_int_rate_path %>

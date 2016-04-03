@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  InterestRate: 9.99
+  EffectiveDate: 2016-04-02
+  CreationDate: 2016-04-02
+
+two:
+  InterestRate: 9.99
+  EffectiveDate: 2016-04-02
+  CreationDate: 2016-04-02
