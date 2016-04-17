@@ -1,4 +1,7 @@
+
 class IntRatesController < ApplicationController
+
+
   before_action :set_int_rate, only: [:show, :edit, :update, :destroy]
 
   # GET /int_rates
@@ -25,6 +28,7 @@ class IntRatesController < ApplicationController
   # POST /int_rates.json
   def create
     @int_rate = IntRate.new(int_rate_params)
+    @int_rate.pull_rates
 
     respond_to do |format|
       if @int_rate.save
